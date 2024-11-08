@@ -16,7 +16,7 @@ A Django-based web scraper that uses AI to analyze web content.
 
 1. Clone the repository:
 
-git clone [https://github.com/username/repository.git](https://github.com/shop2world/AI-Web-Scraper.git)
+git clone https://github.com/shop2world/AI-Web-Scraper.git
 
 
 2. Create and activate virtual environment:
