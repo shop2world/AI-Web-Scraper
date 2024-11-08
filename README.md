@@ -16,7 +16,7 @@ A Django-based web scraper that uses AI to analyze web content.
 
 1. Clone the repository:
 
-git clone https://github.com/username/repository.git
+git clone [https://github.com/username/repository.git](https://github.com/shop2world/AI-Web-Scraper.git)
 
 
 2. Create and activate virtual environment:
@@ -74,7 +74,7 @@ python manage.py runserver
 - Regularly rotate your credentials
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License 
 
 ## Acknowledgments
 - OpenAI for providing the GPT API
