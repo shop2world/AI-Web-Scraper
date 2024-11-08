@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>스크래핑 결과</h1>
+    
+    <h2 class="mt-4">파싱된 결과</h2>
+    <div class="card mb-4">
+        <div class="card-body">
+            <h3>페이지 제목: {{ parsed_result.title }}</h3>
+            <p><strong>요청 내용:</strong> {{ parsed_result.description }}</p>
+            <p><strong>URL:</strong> {{ parsed_result.url }}</p>
+            
+            <h3 class="mt-4">AI 분석 결과:</h3>
+            <div class="ai-analysis">
+                {{ parsed_result.ai_analysis|linebreaks }}
+            </div>
+        </div>
+    </div>
+
+    <h2>원본 DOM 내용</h2>
+    <div class="accordion" id="domAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#domContent">
+                    DOM 내용 보기
+                </button>
+            </h2>
+            <div id="domContent" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                    <pre>{{ dom_content }}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a href="{% url 'scraper:index' %}" class="btn btn-primary">새로운 스크래핑</a>
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,7 @@
+django>=4.2.0
+python-dotenv
+openai
+selenium
+beautifulsoup4
+lxml
+html5lib 

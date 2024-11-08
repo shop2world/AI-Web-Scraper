@@ -1,0 +1,21 @@
+ai_web_scraper/
+├── manage.py
+├── ai_web_scraper/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── scraper/
+│   ├── __init__.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── models.py
+│   ├── forms.py
+│   ├── templates/
+│   │   └── scraper/
+│   │       ├── index.html
+│   │       └── result.html
+│   ├── scrape.py
+│   └── parse.py
+├── requirements.txt
+└── .env 
