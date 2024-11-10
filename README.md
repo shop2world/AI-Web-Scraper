@@ -1,82 +1,124 @@
-# AI Web Scraper
+# AI-JARVIS
 
-A Django-based web scraper that uses AI to analyze web content.
+API-based web scraping and AI analysis system (PythonAnywhere compatible version of AI Web Scraper)
+
+## Major Changes (API Version vs Local Selenium Version)
+
+### API Version (Current)
+- Stable server-side scraping using ScrapingBee API
+- No browser/driver installation required
+- Full PythonAnywhere compatibility
+- Cloud environment support
+- API call costs apply
+
+### Selenium Version ([Original Project](https://github.com/shop2world/AI-Web-Scraper))
+- Requires local Chrome WebDriver
+- Uses system resources
+- Limited on PythonAnywhere free accounts
+- Free to use
+- System dependencies required
+
+## Project Structure
+```
+AI-JARVIS/
+├── ai_web_scraper/        # Main project directory
+├── scraper/              # Main app directory
+├── requirements.txt      # Project dependencies
+├── .env.example         # Example environment variables
+├── README.md            # Project documentation
+└── deployment.md        # Deployment guide
+```
 
 ## Features
-- Web content scraping
-- AI-powered content analysis using OpenAI GPT
-- Clean and simple user interface
+- Web scraping via ScrapingBee API
+- Content analysis with OpenAI GPT
+- Cloud environment support
+- Simple user interface
 
 ## Prerequisites
 - Python 3.8+
-- Chrome WebDriver
+- ScrapingBee API key
 - OpenAI API key
 
 ## Installation
 
 1. Clone the repository:
-
-git clone https://github.com/shop2world/AI-Web-Scraper.git
-
+```bash
+git clone https://github.com/shop2world/Ai-JARVIS.git
+cd Ai-JARVIS
+```
 
 2. Create and activate virtual environment:
-
-
+```bash
 # Windows
-
 python -m venv venv
+.\venv\Scripts\activate
 
-
-macOS/Linux
+# macOS/Linux
 python -m venv venv
 source venv/bin/activate
-
+```
 
 3. Install required packages:
-
+```bash
 pip install -r requirements.txt
+```
 
 4. Set up environment variables:
-- Copy `.env.example` to `.env`
-- Update `.env` with your actual credentials:
+```bash
+# Copy .env.example to .env
+cp .env.example .env
 
+# Add your API keys to .env file
+OPENAI_API_KEY=your_openai_api_key
+SCRAPINGBEE_API_KEY=your_scrapingbee_api_key
+```
 
-5. Run migrations:
+## API Usage and Costs
+- ScrapingBee: 
+  - Free trial: 1,000 credits
+  - Basic plan: $49/month (10,000 credits)
+- OpenAI:
+  - GPT-3.5-turbo: $0.002/1K tokens
 
-python manage.py migrate
+## Performance Comparison
+| Feature | API Version | Selenium Version |
+|---------|-------------|------------------|
+| Speed | Faster | Slower |
+| Cost | Paid | Free |
+| Reliability | High | Medium |
+| Cloud Support | Yes | Limited |
 
-6. Start the development server:
+## Security
+- Maintain API key security
+- Proper environment variable management
+- HTTPS recommended
+- Never commit .env file
+- Set DEBUG=False in production
 
-python manage.py runserver
-
-## Usage
-1. Access the application at `http://localhost:8000`
-2. Enter the URL you want to scrape
-3. Describe what you want to analyze
-4. Click "Scrape and Parse" to get results
-
-## Environment Variables
-| Variable | Description |
-|----------|-------------|
-| `OPENAI_API_KEY` | Your OpenAI API key |
-| `SBR_WEBDRIVER` | Path to Chrome WebDriver |
+## License
+MIT License
 
 ## Contributing
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Create feature branch
+3. Commit changes
+4. Push to branch
+5. Create Pull Request
 
-## Security Notice
-- Never commit your `.env` file
-- Keep your API keys private
-- Regularly rotate your credentials
-
-## License
-This project is licensed under the MIT License 
+## Support
+For any inquiries or support:
+- Contact: Frank Kim
+- Email: info@shop2world.com
+- Twitter: [@salecoupon](https://x.com/salecoupon)
+- Issue Tracker: Use the GitHub issue tracker for technical questions
 
 ## Acknowledgments
-- OpenAI for providing the GPT API
-- Beautiful Soup for web scraping capabilities
+- OpenAI for GPT API
+- ScrapingBee for web scraping API
 - Django framework
+- Original AI-Web-Scraper project
+```
+
+
+
